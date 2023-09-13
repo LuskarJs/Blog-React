@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+.conta-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+.conta-container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40%;
+    border: none;
+    padding: 10px 0;
+    transform: scale(1);
+    border-radius: 0px;
+    transition: transform .35s ease;
+    background: transparent;
+    color: white;
+}
+
+.conta-container button p{
+    margin-left: 10px
+}
+
+.section-Forget,
+.section-create,
+.section-login {
+    width: 95vw;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.section-Forget{
+    height: 100vh;
+    margin-bottom: 7.5rem;
+}
+
+.section-create {
+    padding: .5rem 0;
+}
+
+.section-Forget .content-forget,
+.section-login .content-login,
+.section-create .content-create {
+    width: 100%;
+    padding: 1.4rem;
+    margin: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-Forget .content-forget .content-text,
+.section-login .content-login .content-text,
+.section-create .content-create .content-text {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+}
+
+.section-Forget .content-forget .content-text h2,
+.section-login .content-login .content-text h2,
+.section-create .content-create .content-text h2 {
+    font-weight: 700;
+    color: #52537A;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.section-Forget .content-forget .content-text h3,
+.section-login .content-login .content-text h3,
+.section-create .content-create .content-text h3 {
+    color: #52537A;
+    font-size: 1.2rem;
+    margin-bottom: .6rem;
+    margin: 1rem 0;
+}
+
+.section-Forget .content-forget .content-text p,
+.section-login .content-login .content-text p,
+.section-create .content-create .content-text p {
+    color: grey;
+    margin: 1rem 0;
+}
+
+#App.Dark .section-Forget .content-forget .content-text p,
+#App.Dark .section-login .content-login .content-text p,
+#App.Dark .section-create .content-create .content-text p {
+    color: white;
+}
+
+.section-login .content-login figure,
+.section-create .content-create figure {
+    width: 300px;
+    height: 300px;
+}
+
+.section-Forget .content-forget figure {
+    width: 400px;
+    height: 400px;
+}
+
+.section-Forget .content-forget figure div,
+.section-login .content-login figure div,
+.section-create .content-create figure div {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/terra.png);
+}
+
+.section-login .content-login figure div {
+    position: relative;
+    background-image: url(../assets/ilu.png);
+}
+
+.section-Forget .content-forget figure div {
+    position: relative;
+    background-image: url(../assets/forget.png);
+}
+
+.section-login .content-login figure div::after{
+    position: absolute;
+    content: "";
+    background-color: #A3A4D1;
+    width: 110%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(75deg);
+    border-radius: 100px 200px 50px 100px;
+}
+
+.section-Forget .content-forget figure div::after{
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 40px;
+    background-color: #A3A4D1;
+    width: 400px;
+    height: 250px;
+    z-index: -1;
+    border-radius: 100px 200px 50px 100px;
+}
+
+.section-create form,
+.section-Forget form,
+.section-login form {
+    display:flex;
+    margin: 0 .5rem;
+    font-family: "Poppins", sans-serif ;
+    flex-direction: column;
+    align-items: center;
+    color: #52537A;
+    background-color: #F6F6F6;
+    width: 350px;
+    height: 100%;
+    border-radius: 20px;
+    padding: 2rem 1.2rem;
+    padding-top: 0;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.514);
+}
+
+.section-login form {
+    width: 450px;
+    height: 400px;
+}
+
+.section-Forget form{
+    height: auto;
+}
+
+.section-create form { 
+    width: 450px;
+    height: 95%;
+}
+
+.section-create form .info-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.section-create form .title,
+.section-login form .title {
+    padding-top: 1rem;
+}
+
+.section-login form .pass-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+.section-login form .pass-option .select-put input[type="checkbox"] {
+    cursor: pointer;
+    position: relative;
+    margin-right: 5px;
+}
+
+.section-login form .pass-option .select-put input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color:#A3A4D1;
+    border-radius: 4px;
+}
+
+.section-login form .pass-option .select-put input[type="checkbox"]:checked:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    left: 0;
+    top: 0;
+    height: 15px;
+    background-color:  #52537A;
+    border-radius: 4px;
+}
+
+.section-Forget form .btns p:hover,
+.section-create form .btns p:hover,
+.section-login form .btns p:hover,
+.section-login form .pass-option p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-Forget form .input-br,
+.section-create form .input-br,
+.section-login form .input-br {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: .7rem 0;
+    position: relative;
+}
+
+.input-br .iconPas,
+.input-br .iconLogin{
+    position: absolute;
+    left: 8px;
+    bottom: 4px;
+}
+
+.input-br .CloseEye,
+.input-br .showEye{
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+}
+
+.input-br .showEye.hiddenEye{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-br .CloseEye {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-br .CloseEye.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.section-create form .input-br {
+    margin: .4rem 0;
+}
+
+.section-create form .info-name .input-br {
+    margin-right: .5rem;
+    width: 45%!important;
+}
+
+.section-Forget form .input-br label,
+.section-create form .input-br label,
+.section-login form .input-br label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: .5rem;
+    letter-spacing: 2px;
+    text-transform: upperCase;
+}
+
+.section-Forget form .input-br input,
+.section-create form .input-br input,
+.section-login form .input-br input {
+    border-radius: 20px;
+    border: none;
+    padding: .5rem;
+    padding-left: 2.4rem;
+    color: white;
+    outline: none;
+    background-color: #A3A4D1;
+    box-shadow: 1px 1px 5px #a3a4d1c0;
+}
+
+.section-create form .info-name .input-br input{
+    padding-left: .5rem;
+}
+
+.section-Forget form .input-br input::placeholder,
+.section-create form .input-br input::placeholder,
+.section-login form .input-br input::placeholder{
+    color: white;
+}
+
+.section-Forget form .btns,
+.section-create form .btns,
+.section-login form .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section-create form .btns{
+    margin-top: 1.5rem;
+}
+
+.section-Forget form .btns {
+    margin-top: .5rem;
+}
+
+form .btns .or {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+form .btns .or span {
+    width: 100px;
+    height: 2px;
+    background-color: #52537A;
+}
+
+form .btns .or > p {
+    text-decoration: none!important;
+    cursor: text!important;
+}
+
+.section-Forget form .btns button,
+.section-create form .btns button,
+.section-login form .btns button {
+    width: 80%;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    border: none;
+    padding: .7rem 1rem;
+    background-color: #52537A;
+    color: white;
+    cursor:pointer;
+    transition: backgroundColor .35s ease;
+}
+
+
+.section-Forget form .btns button:hover,
+.section-create form .btns button:hover,
+.section-login form .btns button:hover{
+    background-color: #52537ad2;
+    transition: backgroundColor .35s ease;
+}
+
+@media (max-width: 932px) {
+
+    .content-forget figure,
+    .content-login figure {
+        height: 210px!important;
+    }
+
+    .content-create figure {
+        height: 300px!important;
+    }
+
+    .content-create .content-text p,
+    .content-forget .content-text p,
+    .content-login .content-text p {
+        display:none;
+    }
+
+    .content-create .content-text h3,
+    .content-forget .content-text h3,
+    .content-login .content-text h3{
+        font-size: 1rem!important;
+        color:black!important;
+        font-weight: 400!important;
+    }
+}
+
+@media (max-width: 899px) {
+    .content-create{
+        display:none!important;
+    }
+
+    .section-create{
+        width: 100vw!important;
+        height: 100vh!important;
+    }
+
+    .section-create form {
+        height: 100%;
+    }
+}
+
+@media (max-width: 766px) {
+    .content-forget,
+    .content-login {
+        display:none!important;
+    }
+
+    .content-forget,
+    .section-login {
+        width: 100vw;
+        height: 100vh!important;
+    }
+}

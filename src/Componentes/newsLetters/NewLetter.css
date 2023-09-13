@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+.Container {
+    font-family: "Poppins", sans-serif;
+    margin: 1rem;
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.Container::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: -2rem;
+    height: 1px;
+    background-color: #d1cbcb;
+}
+
+.Container form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 0px #60619e;
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#App.Dark .Container form {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.589);
+}
+
+.Container form label {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#60619e;
+}
+
+.Container form label.color {
+    color: white;
+}
+
+.Container form input {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: .4rem;
+}
+
+.Container form button {
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    padding: .5rem;
+    transition: all .35s ease;
+    cursor: pointer;
+    border: none;
+    background-color: #60619e;
+}
+
+.Container form button:Hover {
+    background-color: #7475b8;
+    box-shadow: 0px 2px 10px 0px #60619e;
+    transition: all .35s ease;
+}

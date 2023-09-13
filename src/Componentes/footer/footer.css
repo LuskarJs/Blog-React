@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+footer {
+    width: 100%;
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    z-index: 1;
+}
+
+footer.hidden {
+    display: none;
+}
+
+footer.show {
+    display: flex;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    color: white;
+    display: block;
+    padding: .5rem 0;
+    background-color: #676899;
+}
+
+footer p a {
+    color: white;
+}
+
+footer p a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer .Container-footer {
+    width: 100%;
+    background-color:  #52537A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem 0;
+    justify-content: center;
+}
+
+footer .Container-footer .logo figure img {
+    width: 50px;
+    margin-left: 2rem;
+    background-color: white;
+    padding: .4rem;
+    border-radius: 50%;
+}
+
+footer .Container-footer .nav-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 1rem 2rem;
+}
+
+footer .Container-footer .nav-footer ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .Container-footer .nav-footer ul li {
+    gap: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+footer .Container-footer .nav-footer ul li h4 {
+    background-color: #676899;
+    width: 100%;
+    display: block;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+footer .Container-footer .nav-footer ul li ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+}
+
+footer .Container-footer .nav-footer ul li > ul li p{
+    background-color: transparent;
+    transition: transform .35s ease;
+    font-size: .6rem;
+}
+
+footer .Container-footer .nav-footer ul li > ul li p:Hover{
+    transform: translateX(10px);
+    transition: transform .35s ease;
+}
+
+footer .Container-footer .nav-footer ul li ul li p:Hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    
+footer .Container-footer .nav-footer ul li,
+footer .Container-footer .nav-footer ul li a {
+    color: white;
+    font-size: .8rem;
+}
+
+.Btn-top {
+    display: flex;
+    align-items: center;
+    background-color: #7879b8;
+    border-radius: 5px;
+    padding: .5rem;
+    box-shadow: 0px 2px 10px 0px #7879b8;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform .35s ease;
+    cursor: pointer;
+}
+
+.Btn-top button {
+    border: none;
+    background: transparent;
+}
+
+.Btn-top button svg {
+    cursor: pointer;
+}
+
+.Btn-top a {
+    background-color: #676899;
+    border: none;
+}

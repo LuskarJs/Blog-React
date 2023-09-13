@@ -1,0 +1,60 @@
+.switcher-container {
+    width: 100%;
+    padding-right: 2rem;
+}
+
+.switcher-container .switcher {
+    display: flex;
+    padding: 10px;
+    height: 30px;
+    max-width: 75px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: relative;
+    background-color: #3d3e6d;
+    align-items: center;
+    overflow: hidden;
+}
+
+.switcher-container .switcher .dark, .light {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+}
+
+.switcher-container .switcher .dark{
+    z-index: 10;
+    left: 5px;
+}
+
+.switcher-container .switcher .light{
+    z-index: 10;
+    right: 5px;
+}
+
+.switcher-container .switcher .bar-left.active{
+    background-color: #7778d47a;
+    transition: backgroundColor .35s ease;
+    width: 40px;
+    height: 130px;
+    position: absolute;
+    left: -9px;
+    bottom: -6px;
+}
+
+.switcher-container .switcher .bar-right.active{
+    width: 40px;
+    height: 130px;
+    background-color: #7778d47a;
+    transition: backgroundColor .35s ease;
+    position: absolute;
+    left: -9px;
+    bottom: -6px;
+}
+
+.switcher-container .switcher img {
+     width: 15px;
+}

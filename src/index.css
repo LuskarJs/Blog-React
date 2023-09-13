@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    background: none;
+    width: 7px;
+    transition: width 1s ease;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #52537A;
+    border-radius: 2px;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+    display: none!important;
+}
+

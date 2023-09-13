@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+.Content-Stories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 290px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Content-Stories .NavBar-time {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0 4px;
+    padding: 0 .7rem;
+    height: 10px;
+}
+
+.Content-Stories .NavBar-time .storie {
+    border-radius: 20px;
+    background-color: #6f6f7ab9;
+    height: 10px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.Content-Stories .NavBar-time .storie .bar{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #5f5f92;
+    transition: width .4s ease;
+}
+
+.Content-Stories .NavBar-time .storie .bar.active{
+    width: 100%;
+    transition: width .4s ease;
+}
+
+.Content-Stories .NavBar-time .storie:hover {
+    background-color: #52537A;
+    transition: backgroundColor .35s ease;
+}
+
+.Content-Stories .title-stories {
+    width: 95%;
+    color: white;
+    padding: .3rem;
+    padding-left: .7rem;
+    box-shadow: 4px 2px 10px 0px rgba(54, 52, 52, 0.829);
+    background-color: #52537A;
+    margin: .4rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.Content-Stories .title-stories h2 {
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Content-Stories .Stories {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 350px;
+    padding: 1rem 0;
+    gap: 1rem;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.Content-Stories .Stories .Card-Storie {
+    position: relative;
+    cursor: pointer;
+    height: 300px;
+}
+
+.Content-Stories .Stories .Card-Storie .info-storie {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Poppins';
+    font-weight: 800;
+    color: white;
+    margin: .8rem;
+}
+
+.Content-Stories .Stories .Card-Storie figure::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    background-image: linear-gradient(transparent, #52537A);
+}
+
+.Content-Stories .Stories .Card-Storie:first-child {
+    margin-left: 1rem;
+}
+
+
+.Content-Stories .Stories .Card-Storie figure {
+    margin: 1rem .5rem;
+    width: 200px;
+    overflow: hidden;
+}
+
+.Content-Stories .Stories .Card-Storie figure img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.664);
+    border-radius: 25px;
+    border-bottom: 1px solid #52537A;
+    margin-top: .2rem;
+    transition: transform .35s ease;
+    transform: translateY(-5px);
+    width: 100%;
+    height: 100%;
+}
+
+
+.Content-Stories .Stories .Card-Storie figure img:hover {
+    box-shadow: 0px 4px 10px 0 #52537A;
+    transform: translateY(-10px);
+    transition: transform .35s ease;
+}
+
+
+.content-bg {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-storie .time-bar {
+    position: fixed;
+    top: 1.5rem;
+    width: 50%;
+    border-radius: 10px;
+    height: .5rem;
+}
+
+.content-storie .time-bar .storie {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.content-storie {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.content-storie .content-info-story {
+    margin-top: 1rem;
+    font-family: "Poppins", sans-serif;
+    width: 50%;
+    height: 100%;
+    margin-left: .8rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.content-storie .info-storie h3 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: .2rem;
+    background-color: #5f5f92;
+    color: white;
+    display: inline;
+    margin-bottom: 1rem;
+    padding: .2rem 1rem;
+}
+
+.content-storie .info-storie p {
+    color: grey;
+    font-size: .7rem;
+    font-weight: 800;
+    margin: 0.7rem 0 0.7rem 0.7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.content-storie .info-storie h4 {
+    background-color: #52537A;
+    text-transform: uppercase;
+    padding: .2rem .5rem;
+    display: inline;
+    color: white;
+    border-radius: 10px;
+}
+
+.content-storie .content-info-story .coments  {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 2rem 0;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    align-items: flex-start;
+}
+
+.content-storie .content-info-story .coments .add-coment {
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5rem;
+}
+
+.content-storie .content-info-story .coments .add-coment button {
+    display: inline;
+    width: 90%;
+    background-color: #52537A;
+    color: white;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    padding: .7rem .2rem;
+}
+
+.content-storie .content-info-story .coments .add-coment button:hover {
+    cursor: pointer;
+    background-color: #5f5f92;
+    box-shadow: 0px 0px 10px 0px #5f5f92;
+    transition: all .35s ease;
+}
+
+.content-storie .content-info-story .coments .comment{
+    margin: 0 .7rem;
+    width: 85%;
+    margin-top: 2rem;
+    padding: .7rem;
+    z-index: -0;
+    position: relative;
+    display:flex;
+    align-items: center;
+}
+
+.content-storie .content-info-story .coments .comment .list-icon {
+    align-items: center;
+    bottom: -45px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    position: absolute;
+    gap: 0.2rem;
+    right: -75px;
+    width: 20%;
+    z-index: 1;    
+}
+
+.content-storie .content-info-story .coments .comment .list-icon li {
+    background-color: #5f5f92;
+    height: 100%;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.content-storie .content-info-story .coments .comment .list-icon li:hover {
+    box-shadow: 5px 0px 10px 0px #5f5f92;
+    transition: all .35s ease;
+}
+
+.content-storie .content-info-story .coments .comment .list-icon li svg {
+    color: white;
+}
+
+.content-storie .content-info-story .coments .comment::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    height: 100px;
+}
+
+.content-storie .content-info-story .coments .comment .info-Coment {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.content-storie .content-info-story .coments .comment .info-Coment > h2 {
+    position: absolute;
+    left: 3.6rem;
+    margin-left: -1rem;
+    z-index: 1;
+    font-size: 1.2rem;
+    background-color: #5f5f92;
+    color: white;
+    padding: .4rem 1.5rem;
+    padding-right: .8rem;
+    padding-left: 1.7rem;
+    border-radius: 10px;
+}
+
+.coment-area {
+    margin-top: 3.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    height: 65vh;
+    overflow-y: scroll;
+}
+
+.coment-area .notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.coment-area .notfound p {
+    margin-top: 7rem;
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+}
+
+.coment-area .notfound figure {
+    width: 150px;
+    height: 190px;
+    position: absolute;
+    top: 2rem;
+}
+
+.coment-area .notfound figure img {
+    height: 100%;
+    width: 100%;
+}
+
+.comment .content-coment {
+    z-index: 5;
+    height: 70px;
+    border-radius: 10px;
+    position: absolute;
+    top: 5rem;
+    width: 95%;
+    overflow-y: scroll;
+}
+
+.content-storie .content-info-story .coments .comment .content-coment  p{
+    padding: .3rem;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    z-index: 10;
+}
+
+.content-storie .content-info-story .coments .comment .info-Coment figure  {
+    width: 50px;
+    z-index: 2;
+    height: 50px;
+}
+
+.content-storie .content-info-story .coments .comment .info-Coment figure img {
+    width: 100%;
+    height: 100%;
+    background-color: #5f5f92;
+    border: 3px solid #5f5f92;
+    border-radius: 50%;
+}
+
+.content-bg .content-storie .Views {
+    background-color: black;
+    width: 30rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0 1.5rem;
+    position: fixed;
+    left: 10px;
+    top: 1.5rem;
+    box-shadow: 0px 0px 10px 0 rgba(20, 20, 20, 0.753);
+}
+
+.content-bg .content-storie .Views figure {
+    height: 85vh;
+}
+
+.content-bg .content-storie .Views figure img {
+    height: 100%;
+    width: 20rem;
+}
+
+.AllStorie {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+@media (max-width: 1280px) {
+    .AllStorie .sec-storie {
+        width: 55rem!important;
+    }
+}
+
+@media (max-width: 1148px) {
+    .AllStorie .sec-storie {
+        width: 47rem!important;
+    }
+}
+
+@media (max-width: 1044px) {
+    .AllStorie .sec-storie {
+        width: 43rem!important;
+    }
+}
+
+@media (max-width: 940px) {
+    .AllStorie {
+        width: 100vw!important;
+    }
+
+    .AllStorie .sec-storie {
+        width: 52rem!important;
+    }
+
+    .AllStorie .list-storie-all .Card-Storie {
+        width:200px!important;
+        height: 200px!important;
+    }
+}
+
+@media (max-width: 704px) {
+
+    .AllStorie .list-storie-all .Card-Storie {
+        width:150px!important;
+        height: 150px!important;
+    }
+}
+
+
+@media (max-width: 1044px) {
+    .AllStorie {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw!important;
+    }
+    .AllStorie .sec-storie {
+        width: 80%!important;
+        margin-left: 0!important;
+    }
+}
+
+@media (max-width: 418px) {
+    
+    .AllStorie .sec-storie {
+        width: 95%!important;
+        margin-left: 0!important;
+    }
+
+.AllStorie .list-storie-all .Card-Storie {
+    width:100px;
+    height: 100px;
+}
+}
+
+.AllStorie .Title-storie {
+    margin-left: 2rem;
+    text-transform: uppercase;
+    background-color: #5f5f92;
+    padding: .4rem 1rem;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 10px #5f5f92;
+}
+
+.AllStorie .sec-storie {
+    width: 63rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-left: 2rem;
+}
+
+.AllStorie .list-storie-all {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AllStorie .list-storie-all .Card-Storie {
+    text-decoration: none;
+    list-style: none;
+    background-color: #5f5f92;
+    width: 300px!important;
+    height: 400px!important;
+    cursor: pointer;
+    box-shadow: 5px 0px 10px #5f5f92;
+    transition: all .35s ease;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.AllStorie .list-storie-all .Card-Storie:Hover {
+    transform: translateY(-10px);
+    transition: all .35s ease;
+}
+
+
+.AllStorie .list-storie-all li:first-child {
+    scroll-snap-align: start;
+}
+
+.AllStorie .list-storie-all .Card-Storie .info-storie {
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.Card-Storie .info-storie p{
+    padding-left: 20px;
+    width: 100%;
+}
+
+.Card-Storie .time {
+    position: absolute;
+    color: white;
+    top: 5px;
+    text-transform: uppercase;
+    left: 10px;
+}
+
+.Card-Storie .category {
+    position: absolute;
+    display: flex;
+    height: 30px;
+    padding: .2rem;
+    bottom: 5px;
+    right: 0;
+    background-color: #52537A;
+}
+
+.content-coment-new {
+    top: 13rem;
+    left: 33.5rem;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+.content-coment-new form {
+    background-color: white;
+    padding: 1rem;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 10px rgb(29, 28, 28);
+    border-radius: 10px;
+}
+
+.content-coment-new form .inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 0;
+}
+
+.content-coment-new form .inputs input:last-child,
+.content-coment-new form .inputs input:first-child {
+    margin-right: .4rem;
+    padding: .5rem;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 10px;
+}
+
+.content-coment-new form textarea {
+    height: 150px;
+    border-radius: 10px;
+    padding: .2rem;
+    border:1px solid grey;
+    resize: none;
+    outline: none;
+}
+
+.content-coment-new form button {
+    background-color: #52537A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem .4rem;
+    margin: 1rem;
+    cursor: pointer;
+}

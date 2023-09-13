@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+.MoreContent-btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.MoreContent-btn .MoreButton {
+    margin: 0 1rem;
+    font-family: "Poppins", sans-serif;
+    padding: .7rem 5rem;
+    border-radius: 20px;
+    border: 0;
+    background-color: #52537A;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px #64649b;
+    display: flex;
+    align-items: center;
+    transition: all .35s ease;
+}
+
+.MoreContent-btn .MoreButton:hover {
+    transition: all .35s ease;
+    box-shadow: 0px 5px 10px 0px #52537A;
+}
+
+.MoreContent-btn .MoreButton p {
+    color: white;
+    margin-left: 10px;
+}

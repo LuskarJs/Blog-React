@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+
+section .content-wrapper {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .content-wrapper .NewsFeed {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+}
+
+section .content-wrapper .NewsFeed .Card-article:last-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+section .content-wrapper .NewsFeed .Card-article {
+    cursor: pointer;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.801);
+    border-radius: 10px;
+    position: relative;
+}
+
+section .content-wrapper .NewsFeed .Card-article::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(transparent, #525374);
+}
+
+section .content-wrapper .NewsFeed .Card-article:Hover figure img{
+    transform: scale(1.1);
+    transition: transform .35s ease;
+}
+
+section .content-wrapper .NewsFeed .Card-article figure img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .35s ease;
+}
+
+section .content-wrapper .NewsFeed .Card-article:last-child figure img {
+    width: 50%;
+    left: auto;
+    right: 0!important;
+}
+
+section .content-wrapper .NewsFeed .Card-article .Card-info{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    left: 10px;
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+}
+
+section .content-wrapper .NewsFeed .Card-article .Card-info h2 {
+    font-size: .9rem;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section .content-wrapper .NewsFeed .Card-article .Card-info h3 {
+    display: none;
+}
+
+section .content-wrapper .NewsFeed .Card-article:last-child .Card-info h3 {
+    display: block;
+    font-weight: 300;
+    padding-right:2rem;
+    font-size: .8rem;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+section .content-wrapper .NewsFeed .Card-article:last-child .Card-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    width: 50%;
+    height: 100%;
+    background-color: #525374;
+}
+
+@media (max-width: 798px) {
+    section .content-wrapper .NewsFeed {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section .content-wrapper .NewsFeed .Card-article:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    section .content-wrapper .NewsFeed .Card-article:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    
+section .content-wrapper .NewsFeed .Card-article:nth-child(3) .Card-info h3 {
+    display: block;
+    font-weight: 300;
+    padding-right:2rem;
+    font-size: .8rem;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+    
+section .content-wrapper .NewsFeed .Card-article:nth-child(3) .Card-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    width: 50%;
+    height: 100%;
+    background-color: #525374;
+}
+}

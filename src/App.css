@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background-color: #e5e5e5;
+}
+
+.App .bg-body {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;    
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.4;
+    background-position: center;
+    background-image: url(Componentes/assets/24.jpg);
+}
+
+.App .wrapper {
+    overflow: hidden;
+    padding-top: 4rem;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 4fr 1fr;
+    position: relative;
+}
+
+
+.App .wrapper:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    z-index: -0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(transparent, #52537ad7);
+}
+
+.App.Light{
+    background-color: #E5E5E5;
+    color: black;
+}
+
+#App.Dark{
+    background-color: #2a2a3f!important;
+    color: white;
+}
+
+@media (max-width: 445px) {
+    .App {
+        padding-top: 3.5rem;    
+    }
+}

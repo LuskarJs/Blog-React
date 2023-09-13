@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333232;
+}
+
+.ShowColumn {
+    position: fixed;
+    right: 0;
+    top: 80px;
+    z-index: 10;
+    transform: translateX(200px);
+    transition: all .35s ease;
+}
+
+.ShowColumn.Closer {
+    right: 21.7rem;
+    transition: all .35s ease;
+}
+
+.ShowColumn button {
+    padding: .5rem 1rem;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+    box-shadow: 0px 5px 10px 0px #52537A;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #52537A;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ShowColumn button span {
+    transform: translate(360deg);
+    transition: transform .35s ease;
+}
+
+.ShowColumn button p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.columT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.Content.hidden {
+    display: none;
+}
+
+.Content.show {
+    display: block;
+}
+
+.columT::after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 15px;
+    width: 1px;
+    height: 100vw;
+    background-color: #d1cbcb;
+}
+

@@ -1,0 +1,205 @@
+import './FeedArray.css';
+import React, { useState } from "react";
+import { FeedArticle } from "../FeedSlider/FeedArticles";
+import GridViewIcon from '@mui/icons-material/GridView';
+import SplitscreenIcon from '@mui/icons-material/Splitscreen';
+
+export const FeedGeral = [
+  {
+    id: 1,
+    title: "Dicas para uma Rotina de Exercícios em Casa",
+    category: "Saúde",
+    summary: "Este artigo oferece dicas práticas para estabelecer uma rotina de exercícios em casa e manter-se ativo.",
+    content: "Exercitar-se regularmente traz diversos benefícios para a saúde. Mesmo em casa, é possível manter uma rotina de exercícios eficaz. Neste artigo, apresentamos dicas e sugestões para você criar um ambiente propício para a prática de exercícios em casa, além de recomendações de atividades físicas que podem ser realizadas sem a necessidade de equipamentos específicos. Descubra como se manter ativo e saudável sem sair de casa.",
+    image: "https://source.unsplash.com/featured/300x219",
+    author: {
+      name: "Ana Silva",
+      bio: "Ana Silva é uma personal trainer certificada com ampla experiência em treinamento físico e condicionamento. Ela acredita que a atividade física é essencial para uma vida saudável e busca incentivar as pessoas a adotarem um estilo de vida ativo."
+    },
+    reviewer: {
+      name: "Pedro Santos",
+      bio: "Pedro Santos é nutricionista e especialista em saúde e bem-estar. Ele revisa artigos relacionados à saúde e oferece insights valiosos sobre a importância da atividade física para a qualidade de vida."
+    },
+    postTime: "2023-06-19 09:00",
+    revisedTime: "2023-06-19 10:30",
+    postTimeAfterRevision: "2023-06-19 10:45"
+  },
+  {
+    id: 2,
+    title: "Introdução ao Desenvolvimento Web",
+    category: "Tecnologia",
+    summary: "Este artigo fornece uma introdução básica ao desenvolvimento web e suas principais tecnologias.",
+    content: "O desenvolvimento web é uma área em constante evolução, e compreender seus conceitos fundamentais é essencial para aqueles que desejam ingressar nesse campo. Neste artigo, abordamos os conceitos básicos do desenvolvimento web, incluindo linguagens de marcação, como HTML e CSS, e linguagens de programação, como JavaScript. Além disso, apresentamos as principais tecnologias e ferramentas utilizadas no desenvolvimento web. Esteja preparado para dar os primeiros passos no mundo do desenvolvimento web.",
+    image: "https://source.unsplash.com/featured/300x220",
+    author: {
+      name: "Carlos Ferreira",
+      bio: "Carlos Ferreira é um desenvolvedor web com experiência em diversas tecnologias e frameworks. Ele é apaixonado por compartilhar seus conhecimentos e ajudar outras pessoas a iniciarem suas jornadas no desenvolvimento web."
+    },
+    reviewer: {
+      name: "Mariana Rocha",
+      bio: "Mariana Rocha é uma designer de UX/UI e revisora de artigos relacionados à tecnologia. Ela se dedica a garantir que os artigos ofereçam informações precisas e úteis para os leitores."
+    },
+    postTime: "2023-06-20 11:15",
+    revisedTime: "2023-06-20 12:45",
+    postTimeAfterRevision: "2023-06-20 13:30"
+  },
+  {
+    id: 3,
+    title: "A Importância da Educação Financeira",
+    category: "Finanças",
+    summary: "Este artigo explora a importância da educação financeira e como ela pode capacitar as pessoas a tomar decisões financeiras sólidas.",
+    content: "A educação financeira desempenha um papel vital em nossa vida cotidiana. Neste artigo, discutimos os princípios básicos da educação financeira e como eles podem ajudar as pessoas a gerenciar seu dinheiro de forma eficaz. Exploramos tópicos como orçamento, poupança, investimento e planejamento financeiro a longo prazo. O objetivo é capacitar os leitores a tomar decisões financeiras informadas e construir uma base sólida para a estabilidade financeira.",
+    image: "https://source.unsplash.com/featured/300x230",
+    author: {
+      name: "Michael Thompson",
+      bio: "Michael Thompson é um especialista em finanças com uma paixão por promover a educação financeira. Ele capacita as pessoas a assumirem o controle de suas finanças e a tomar decisões financeiras sólidas."
+    },
+    reviewer: {
+      name: "Sarah Miller",
+      bio: "Sarah Miller é uma consultora financeira e escritora especializada em educação financeira pessoal. Ela garante que o artigo forneça conselhos práticos e capacite os leitores a melhorar sua educação financeira."
+    },
+    postTime: "2023-06-27 15:45",
+    revisedTime: "2023-06-27 17:00",
+    postTimeAfterRevision: "2023-06-27 18:15"
+  },
+  {
+    id: 4,
+    title: "Explorando o Mundo da Literatura Fantástica",
+    category: "Literatura",
+    summary: "Este artigo explora o encantador mundo da literatura fantástica e sua popularidade duradoura.",
+    content: "A literatura fantástica transporta os leitores para reinos mágicos repletos de criaturas míticas, jornadas épicas e aventuras maravilhosas. Neste artigo, exploramos as origens e a evolução da literatura fantástica, desde mitos antigos até romances fantásticos modernos. Investigamos autores renomados e suas obras inovadoras que moldaram o gênero. Embarque em uma jornada literária e descubra o fascínio dos mundos de fantasia que incendeiam a imaginação.",
+    image: "https://source.unsplash.com/featured/300x231",
+    author: {
+      name: "Olivia Thompson",
+      bio: "Olivia Thompson é uma entusiasta da literatura e ávida leitora de literatura fantástica. Ela compartilha sua paixão pelo gênero e apresenta os leitores ao cativante mundo da literatura fantástica."
+    },
+    reviewer: {
+      name: "Robert Harris",
+      bio: "Robert Harris é professor de literatura e editor especializado em literatura fantástica. Ele garante que o artigo explore a riqueza e a importância dos temas e motivos do gênero."
+    },
+    postTime: "2023-06-28 11:00",
+    revisedTime: "2023-06-28 12:15",
+    postTimeAfterRevision: "2023-06-28 13:30"
+  }
+  ,
+  {
+    id: 5,
+    title: "O Poder da Meditação na Vida Diária",
+    category: "Bem-estar",
+    summary: "Este artigo explora os benefícios da meditação e como ela pode melhorar o bem-estar físico e mental.",
+    content: "A meditação é uma prática milenar que oferece inúmeros benefícios para a mente, o corpo e a alma. Neste artigo, exploramos os efeitos positivos da meditação na redução do estresse, melhoria da concentração, aumento da consciência plena e promoção do equilíbrio emocional. Também fornecemos orientações para começar uma prática de meditação e integrá-la à vida diária. Descubra o poder transformador da meditação e comece a colher os benefícios de uma mente calma e equilibrada.",
+    image: "https://source.unsplash.com/featured/300x232",
+    author: {
+      name: "Gabriel Silva",
+      bio: "Gabriel Silva é um praticante de meditação e entusiasta do bem-estar. Ele compartilha sua experiência e conhecimento para ajudar outras pessoas a incorporar a meditação em suas vidas diárias."
+    },
+    reviewer: {
+      name: "Isabella Santos",
+      bio: "Isabella Santos é uma terapeuta holística e escritora especializada em bem-estar mental e físico. Ela garante que o artigo forneça informações confiáveis e inspire os leitores a iniciar uma prática de meditação."
+    },
+    postTime: "2023-06-29 14:30",
+    revisedTime: "2023-06-29 15:45",
+    postTimeAfterRevision: "2023-06-29 17:00"
+  },     
+  {
+    "id": 6,
+    "title": "Introdução ao Machine Learning",
+    "category": "Tecnologia",
+    "summary": "Este artigo oferece uma introdução abrangente ao Machine Learning e suas aplicações.",
+    "content": "O Machine Learning é um campo empolgante que envolve o desenvolvimento de algoritmos capazes de aprender e tomar decisões com base em dados.\n\nNeste artigo, exploraremos os conceitos fundamentais do Machine Learning, incluindo os tipos de aprendizado, algoritmos populares e aplicações práticas.\n\nSe você está interessado em entender como a inteligência artificial pode ser aplicada para resolver problemas do mundo real, este artigo é para você.",
+    "image": "https://source.unsplash.com/featured/300x210",
+    "author": {
+      "name": "Carlos Silva",
+      "bio": "Carlos Silva é um cientista de dados com vasta experiência em Machine Learning. Ele é apaixonado por explorar os limites da inteligência artificial e aplicar suas descobertas em projetos práticos. Através de seus artigos e palestras, Carlos Silva busca compartilhar seus conhecimentos e entusiasmo pelo Machine Learning com outros entusiastas da área."
+    },
+    "reviewer": {
+      "name": "Fernanda Santos",
+      "bio": "Fernanda Santos é uma especialista em Machine Learning e revisora técnica de artigos relacionados à área. Com sua experiência em projetos de Machine Learning em diferentes setores, Fernanda Santos garante que os conteúdos sejam precisos, atualizados e de qualidade para aqueles que desejam aprender e aprofundar seus conhecimentos nesse campo em constante evolução."
+    },
+    "postTime": "2023-06-18 15:00",
+    "revisedTime": "2023-06-18 13:45",
+    "postTimeAfterRevision": "2023-06-18 16:30"
+  },
+  {
+    "id": 7,
+    "title": "Desenvolvimento Web com React",
+    "category": "Programação",
+    "summary": "Este artigo explora os conceitos essenciais do desenvolvimento web com React.",
+    "content": "O React é uma biblioteca JavaScript popular para o desenvolvimento de interfaces de usuário interativas e dinâmicas.\n\nNeste artigo, você aprenderá os conceitos essenciais do React, como componentes, props, state e JSX.\n\nAlém disso, exploraremos práticas recomendadas e dicas úteis para aprimorar suas aplicações com React.\n\nSe você está interessado em criar interfaces de usuário modernas e responsivas, este artigo é o ponto de partida ideal.",
+    "image": "https://source.unsplash.com/featured/300x211",
+    "author": {
+      "name": "Pedro Almeida",
+      "bio": "Pedro Almeida é um desenvolvedor web especializado em React. Ele é apaixonado por compartilhar seu conhecimento e ajudar outros programadores a dominar essa poderosa biblioteca JavaScript. Através de artigos detalhados e tutoriais práticos, Pedro Almeida auxilia os leitores a mergulharem no mundo do React e desenvolverem suas habilidades de programação."
+    },
+    "reviewer": {
+      "name": "Larissa Oliveira",
+      "bio": "Larissa Oliveira é uma desenvolvedora web com experiência em projetos React e revisora técnica de artigos relacionados ao desenvolvimento web. Sua paixão por criar interfaces de usuário elegantes e eficientes impulsiona seu trabalho como revisora, garantindo que os conteúdos sejam claros, precisos e úteis para os leitores que desejam dominar o desenvolvimento web com React."
+    },
+    "postTime": "2023-06-18 15:00",
+    "revisedTime": "2023-06-18 13:45",
+    "postTimeAfterRevision": "2023-06-18 16:30"
+  },
+  {
+    id: 8,
+    title: "Dicas de Viagem: Explorando Destinos Exóticos",
+    category: "Viagem",
+    summary: "Este artigo oferece dicas valiosas para explorar destinos exóticos ao redor do mundo.",
+    content: "Se você está planejando uma aventura em um destino exótico, este artigo é para você.\n\nCompartilharemos dicas valiosas para tornar sua viagem memorável e tranquila.\n\nDesde a escolha do destino até o planejamento logístico, abordaremos todos os aspectos importantes.\n\nVocê descobrirá como se preparar adequadamente para a viagem, quais documentos são necessários, como se adaptar a uma cultura diferente e como aproveitar ao máximo sua experiência.\n\nPronto para embarcar em uma jornada emocionante?\n\nSiga nossas dicas e explore destinos exóticos com confiança!",
+    image: "https://source.unsplash.com/featured/300x212",
+    author: {
+      name: "Mariana Costa",
+      bio: "Mariana Costa é uma exploradora do mundo e amante de viagens exóticas.\n\nEla compartilha suas experiências e conhecimentos adquiridos ao longo de suas aventuras, oferecendo conselhos úteis para quem deseja explorar destinos únicos ao redor do globo.\n\nSeus artigos combinam informações práticas com histórias fascinantes, inspirando os leitores a se aventurarem além das rotas turísticas tradicionais."
+    },
+    reviewer: {
+      name: "Lucas Rodrigues",
+      bio: "Lucas Rodrigues é um viajante experiente e revisor de artigos relacionados a viagens.\n\nCom sua paixão por explorar destinos exóticos e sua experiência prática em planejamento de viagens, Lucas Rodrigues garante que as informações fornecidas sejam precisas, atualizadas e úteis para os leitores interessados em embarcar em aventuras únicas ao redor do mundo."
+    },
+    postTime: "2023-06-18 15:00",
+    revisedTime: "2023-06-18 13:45",
+    postTimeAfterRevision: "2023-06-18 16:30"
+  }
+]; 
+
+
+const FeedPost = () => {
+    const Cards = document.querySelectorAll(".card-slide");
+    const [isColumn, setIsColumn] = useState(false);
+
+    const HandleGridColumn = () => {
+      setIsColumn(true);
+    }
+
+    const HandleResetLayout = () => {
+      setIsColumn(false);
+    }
+
+    if(isColumn){
+      Cards.forEach(cards => {
+        cards.classList.add("Column");
+      })
+    }else {
+      Cards.forEach(cards => {
+        cards.classList.remove("Column");
+      })
+    }
+
+        return (
+            <div className="feed-article">
+              <div className="option-view">
+                <div className={`icon ${isColumn ? 'Column' : ''}`} onClick={HandleGridColumn}>
+                <GridViewIcon />
+                </div>
+                <div className={`icon ${!isColumn ? 'Column' : ''}`} onClick={HandleResetLayout}>
+                <SplitscreenIcon />
+                </div>
+              </div>
+                <div className="feed-slide" >
+                <ul className={`list-Slide ${isColumn ? 'column' : ''}`}>
+                  <FeedArticle  Feed={FeedGeral} />
+                </ul>
+                </div>
+            </div>
+        )           
+}
+
+export default FeedPost;
