@@ -3,6 +3,7 @@
   "description": "Website Blog de Noticias",
   "main": "src/server.js",
   "version": "0.1.0",
+  "homepage": "https://{luskarjs}.github.io/{Blog-React/}",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -27,6 +28,8 @@
     "websocket": "^1.0.34"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "comeca": "react-scripts start",
     "start": "nodemon server.js",
     "build": "react-scripts build",
